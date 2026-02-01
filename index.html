@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplikasi Personal Finance untuk tracking pengeluaran, keuangan bulanan, dan tujuan keuangan">
+    <meta name="theme-color" content="#6366f1">
+    <title>Personal Finance</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Icons (using emoji for now, can be replaced with icon library) -->
+</head>
+<body>
+    <!-- Main Container -->
+    <div id="app" class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-content">
+                <h1 class="app-title">💰 Personal Finance</h1>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav-container">
+            <button class="nav-item active" data-page="dashboard">
+                <span class="nav-icon">📊</span>
+                <span class="nav-label">Dashboard</span>
+            </button>
+            <button class="nav-item" data-page="daily">
+                <span class="nav-icon">🧾</span>
+                <span class="nav-label">Harian</span>
+            </button>
+            <button class="nav-item" data-page="monthly">
+                <span class="nav-icon">📈</span>
+                <span class="nav-label">Bulanan</span>
+            </button>
+            <button class="nav-item" data-page="goals">
+                <span class="nav-icon">🎯</span>
+                <span class="nav-label">Tujuan</span>
+            </button>
+            <button class="nav-item" data-page="ai">
+                <span class="nav-icon">🤖</span>
+                <span class="nav-label">AI Advisor</span>
+            </button>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Dashboard Page -->
+            <div id="dashboard-page" class="page active">
+                <h2 class="page-title">Dashboard</h2>
+                <div id="dashboard-content"></div>
+            </div>
+
+            <!-- Daily Expenses Page -->
+            <div id="daily-page" class="page">
+                <h2 class="page-title">Pengeluaran Harian</h2>
+                <div id="daily-content"></div>
+            </div>
+
+            <!-- Monthly Finance Page -->
+            <div id="monthly-page" class="page">
+                <h2 class="page-title">Keuangan Bulanan</h2>
+                <div id="monthly-content"></div>
+            </div>
+
+            <!-- Financial Goals Page -->
+            <div id="goals-page" class="page">
+                <h2 class="page-title">Tujuan Keuangan</h2>
+                <div id="goals-content"></div>
+            </div>
+
+            <!-- AI Advisor Page -->
+            <div id="ai-page" class="page">
+                <h2 class="page-title">AI Financial Advisor</h2>
+                <div id="ai-content"></div>
+            </div>
+        </main>
+
+        <!-- Floating Action Button -->
+        <button id="fabButton" class="fab" aria-label="Add transaction">
+            <span class="fab-icon">➕</span>
+        </button>
+
+        <!-- Modal Container -->
+        <div id="modalContainer"></div>
+
+        <!-- Toast Container -->
+        <div id="toastContainer" class="toast-container"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

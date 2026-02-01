@@ -1,5 +1,7 @@
 # 💰 Personal Finance - Aplikasi Keuangan Personal
 
+🔴 **LIVE DEMO:** [https://vinux31.github.io/personal-finance/](https://vinux31.github.io/personal-finance/)
+
 Aplikasi web Progressive Web App (PWA) untuk mengelola keuangan personal dengan fitur AI Financial Advisor.
 
 ## ✨ Fitur Utama
